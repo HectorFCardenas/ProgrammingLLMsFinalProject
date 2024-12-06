@@ -1,0 +1,25 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs
+*.log
+
+# Ignore temporary files
+*.tmp
+*.bak
+*.swp
+*.lock
+
+# Ignore compiled files and binaries
+*.class
+*.o
+*.so
+*.dll
+*.exe
+
+# Ignore dependency directories
+node_modules/
+venv/
+__pycache__/
+.env

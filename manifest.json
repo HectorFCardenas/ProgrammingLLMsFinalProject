@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Form AutoFiller",
+    "description": "Tool to automatically fill out forms using LLMs",
+    "version": "1.0",
+    "action": {
+        "default_popup": "popup/popup.html"
+    },
+    "icons": {
+        "16": "images/icon-16.png",
+        "32": "images/icon-32.png",
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+    },
+    "background": {
+        "service_worker": "background.js",
+        "type": "module" 
+    },
+    "permissions": [
+        "storage",
+        "scripting",
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["contentScript.js"],
+            "all_frames": true,
+            "type": "module" 
+        }
+    ]
+}
